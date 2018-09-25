@@ -6,28 +6,25 @@ public class Lab00
         String y = "hello";
         double z = 9.8;
         
-        System.out.println("x:", x, "y:", y, "z:", z);
+        System.out.println("x: " + x + " y: " + y + " z: " + z);
         
         int[] nums = {3, 6, -1, 2};
-        for (int i=0; nums.length; i++)
-            System.out.print(nums[i]);
+        for (int num : nums)
+            System.out.println(num);
         
-        int numFound = char_count(y, "l");
-        System.out.println("Found:", numFound);
+        int numFound = char_count(y, 'l');
+        System.out.println("Found: " + numFound);
         
         for (int i=1; i<11; i++)
-            System.out.println(i);
+            System.out.print(i + " ");
         
-        System.out.println;
-        
-        
-        
-        
+        System.out.println();
+         
     }
-    public static int char_count(String string, int character)
+    public static int char_count(String string, char character)
     {
         int count = 0;
-        for (int i=0; string.length()-1; i++)
+        for (int i=0; i < string.length(); i++)
             if (string.charAt(i)==character){
                 count++;
             }
